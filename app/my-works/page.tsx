@@ -53,33 +53,36 @@ const MyWorks: NextPage = ({}) => {
         <div className="grid md:grid-cols-2 space-y-4 space-x-4">
           {finalProjects.map((project) => {
             return (
-              <motion.a
+              <motion.div
                 key={project.id}
-                href={project.url == null ? "#" : project.url}
-                target={project.url ? "_blank" : undefined}
-                rel={project.url ? "noopener noreferrer" : undefined}
                 className={`gap-3 flex flex-col transition ${
                   project.url == null
                     ? "cursor-not-allowed"
                     : "cursor-pointer hover:scale-95"
                 }`}
               >
-                <Image
-                  alt={project.name}
-                  width={project.image.width}
-                  height={project.image.height}
-                  src={project.image.src}
-                />
-                <div className="flex justify-between items-start">
-                  <span className="text-2xl pr-4">{project.name}</span>
+                <a
+                  href={project.url == null ? "#" : project.url}
+                  target={project.url ? "_blank" : undefined}
+                  rel={project.url ? "noopener noreferrer" : undefined}
+                >
                   <Image
-                    src={TopArrowIcon.src}
-                    className="mt-3"
-                    alt="Top Arrow"
-                    width={TopArrowIcon.width}
-                    height={TopArrowIcon.height}
+                    alt={project.name}
+                    width={project.image.width}
+                    height={project.image.height}
+                    src={project.image.src}
                   />
-                </div>
+                  <div className="flex justify-between items-start">
+                    <span className="text-2xl pr-4">{project.name}</span>
+                    <Image
+                      src={TopArrowIcon.src}
+                      className="mt-3"
+                      alt="Top Arrow"
+                      width={TopArrowIcon.width}
+                      height={TopArrowIcon.height}
+                    />
+                  </div>
+                </a>
                 <span
                   onClick={() => handleExpandsion(project)}
                   className="font-[Inter] text-gray-500 cursor-pointer flex gap-2"
@@ -117,7 +120,7 @@ const MyWorks: NextPage = ({}) => {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </motion.a>
+              </motion.div>
             );
           })}
         </div>
