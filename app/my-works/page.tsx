@@ -10,7 +10,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Footer from "../components/footer";
 import Image from "next/image";
 
-// interface Props {}
+/// interface Props {}
 
 const Projects = projects.map((project) => {
   return { expanded: false, ...project };
