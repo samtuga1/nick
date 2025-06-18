@@ -11,9 +11,9 @@ import Signature from "../assets/images/nick-sign.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-interface Props {}
+// interface Props {}
 
-const About: NextPage<Props> = ({}) => {
+const About: NextPage = ({}) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

@@ -1,12 +1,13 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import { NextPage } from "next";
 import socials from "../utils/socials";
 import ArrowIcon from "../assets/images/top-arrow.svg";
 import Image from "next/image";
 
-interface Props {}
+// interface Props {}
 
-const Footer: NextPage<Props> = ({}) => {
+const Footer: NextPage = ({}) => {
   return (
     <div className="bg-black text-white md:px-25 lg:px-70 transition-all px-5 pt-15 mt-15">
       <span className="text-2xl">

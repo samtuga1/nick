@@ -1,21 +1,23 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
+
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { NextPage } from "next";
 import Link from "next/link";
 
-interface Props {}
+// interface Props {}
 
-const Header: NextPage<Props> = ({}) => {
-  const [isScrolled, setIsScrolled] = useState(false);
+const Header: NextPage = ({}) => {
+  // const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  // useEffect(() => {
+  //   const onScroll = () => {
+  //     setIsScrolled(window.scrollY > 10);
+  //   };
+  //   window.addEventListener("scroll", onScroll);
+  //   return () => window.removeEventListener("scroll", onScroll);
+  // }, []);
 
   const pathname = usePathname();
 
