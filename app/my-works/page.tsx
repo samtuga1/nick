@@ -10,7 +10,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Footer from "../components/footer";
 import Image from "next/image";
 
-/// interface Props {}
+// interface Props {}
 
 const Projects = projects.map((project) => {
   return { expanded: false, ...project };
@@ -62,6 +62,11 @@ const MyWorks: NextPage = ({}) => {
                 }`}
               >
                 <a
+                  className={`${
+                    project.url == null
+                      ? "cursor-not-allowed"
+                      : "cursor-pointer"
+                  }`}
                   href={project.url == null ? "#" : project.url}
                   target={project.url ? "_blank" : undefined}
                   rel={project.url ? "noopener noreferrer" : undefined}
