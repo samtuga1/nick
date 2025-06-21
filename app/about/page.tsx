@@ -3,11 +3,11 @@
 
 import { NextPage } from "next";
 import NickImage from "../assets/images/nick.jpg";
-import Brolly from "../assets/images/brolly.png";
-import BeyondSend from "../assets/images/beyond-send.png";
-import WeWire from "../assets/images/wewire.png";
-import BuddyVotes from "../assets/images/buddy-votes.png";
-import Xharp from "../assets/images/xharp.png";
+import Brolly from "../assets/images/brolly.svg";
+import BeyondSend from "../assets/images/beyond-send.svg";
+import WeWire from "../assets/images/wewire.svg";
+import BuddyVotes from "../assets/images/buddy-votes.svg";
+import Xharp from "../assets/images/xharp.svg";
 import Signature from "../assets/images/nick-sign.svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -84,7 +84,8 @@ const About: NextPage = ({}) => {
                     key={index}
                     src={image.src}
                     alt="image"
-                    className="w-[6rem] md:w-[7rem] transition md:h-[30px] h-[25px] pr-[15px]"
+                    className="transition pr-[15px]"
+                    // className="w-[6rem] md:w-[7rem] transition md:h-[30px] h-[25px] pr-[15px]"
                     width={image.width}
                     height={image.height}
                   />
@@ -97,7 +98,8 @@ const About: NextPage = ({}) => {
                     key={`copy-${index}`}
                     src={image.src}
                     alt="image"
-                    className="w-[6rem] md:w-[7rem] transition md:h-[30px] h-[25px] pr-[15px]"
+                    className="transition pr-[15px]"
+                    // className="w-[6rem] md:w-[7rem] transition md:h-[30px] h-[25px] pr-[15px]"
                     width={image.width}
                     height={image.height}
                   />
