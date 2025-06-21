@@ -11,7 +11,7 @@ import Xharp from "../assets/images/xharp.png";
 import Signature from "../assets/images/nick-sign.svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useOnScreen } from "@/hooks/visible-hook";
+// import { useOnScreen } from "@/hooks/visible-hook";
 // import Signature from "../components/signature";
 
 // interface Props {}
