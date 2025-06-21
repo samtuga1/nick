@@ -14,7 +14,7 @@ const Footer: NextPage = ({}) => {
         Feel free to connect let's chat about design, product, mentorship,
         community or anything technology 😎
       </span>
-      <div className="grid md:grid-cols-3 mt-10 md:mt-15 space-x-10 pb-20 w-full">
+      <div className="grid md:grid-cols-3 mt-10 md:mt-15 gap-x-10 pb-20 w-full">
         {socials.map((social) => {
           return (
             <a

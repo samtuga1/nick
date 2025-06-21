@@ -43,11 +43,11 @@ const MyWorks: NextPage = ({}) => {
       transition={{ duration: 0.4 }}
     >
       <div className="px-5 pt-20 flex flex-col gap-2 md:px-25 lg:px-70 transition-all">
-        <span className="font-normal md:font-medium text-3xl md:w-[400px] md:text-4xl">
+        <span className="font-normal md:font-medium text-3xl md:text-4xl">
           Not just concepts—these are real, shipped products delivering
           real-world results.
         </span>
-        <span className="text-[color:var(--color-primary-color)] pt-6 pb-1">
+        <span className="text-[color:var(--color-primary-color)] pt-6 pb-[1rem]">
           Selected projects
         </span>
         <div className="grid md:grid-cols-2 space-y-4 space-x-4">
@@ -55,7 +55,7 @@ const MyWorks: NextPage = ({}) => {
             return (
               <motion.div
                 key={project.id}
-                className={`gap-3 flex flex-col transition ${
+                className={`gap-3 flex flex-col transition pb-5 ${
                   project.url == null
                     ? "cursor-not-allowed"
                     : "cursor-pointer hover:scale-95"
@@ -77,7 +77,7 @@ const MyWorks: NextPage = ({}) => {
                     height={project.image.height}
                     src={project.image.src}
                   />
-                  <div className="flex justify-between items-start">
+                  <div className="flex justify-between items-start pt-4">
                     <span className="text-2xl pr-4">{project.name}</span>
                     <Image
                       src={TopArrowIcon.src}

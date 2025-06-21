@@ -8,13 +8,17 @@ import BeyondSend from "../assets/images/beyond-send.png";
 import WeWire from "../assets/images/wewire.png";
 import BuddyVotes from "../assets/images/buddy-votes.png";
 import Xharp from "../assets/images/xharp.png";
-import Signature from "../assets/images/nick-sign.png";
+import Signature from "../assets/images/nick-sign.svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useOnScreen } from "@/hooks/visible-hook";
+// import Signature from "../components/signature";
 
 // interface Props {}
 
 const About: NextPage = ({}) => {
+  const [ref, visible] = useOnScreen();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -57,7 +61,7 @@ const About: NextPage = ({}) => {
           <div className="pointer-events-none absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-[color:var(--color-scaffold-color)] to-transparent z-10" />
 
           {/* Scrollable content */}
-          <div className="flex flex-row overflow-x-scroll scrollbar-hidden whitespace-nowrap relative z-0 pb-10 scroll-smooth">
+          {/* <div className="flex flex-row overflow-x-scroll scrollbar-hidden whitespace-nowrap relative z-0 pb-10 scroll-smooth">
             {[Brolly, BeyondSend, WeWire, BuddyVotes, Xharp].map(
               (image, index) => (
                 <Image
@@ -70,13 +74,43 @@ const About: NextPage = ({}) => {
                 />
               )
             )}
+          </div> */}
+
+          <div className="overflow-x-hidden relative w-full">
+            <div className="flex animate-marquee flex-row whitespace-nowrap w-max">
+              {[Brolly, BeyondSend, WeWire, BuddyVotes, Xharp].map(
+                (image, index) => (
+                  <Image
+                    key={index}
+                    src={image.src}
+                    alt="image"
+                    className="w-[6rem] md:w-[7rem] transition md:h-[30px] h-[25px] pr-[15px]"
+                    width={image.width}
+                    height={image.height}
+                  />
+                )
+              )}
+              {/* duplicate list for seamless looping */}
+              {[Brolly, BeyondSend, WeWire, BuddyVotes, Xharp].map(
+                (image, index) => (
+                  <Image
+                    key={`copy-${index}`}
+                    src={image.src}
+                    alt="image"
+                    className="w-[6rem] md:w-[7rem] transition md:h-[30px] h-[25px] pr-[15px]"
+                    width={image.width}
+                    height={image.height}
+                  />
+                )
+              )}
+            </div>
           </div>
         </div>
-        <div className=" flex justify-center pb-10">
+        <div className="flex justify-center pb-10">
           <Image
             src={Signature.src}
             alt="image"
-            className="w-[150px] md:w-[190px] transition"
+            className="md:w-[190px] transition md:scale-60 pt-8"
             width={Signature.width}
             height={Signature.height}
           />
