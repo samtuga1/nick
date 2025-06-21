@@ -17,7 +17,7 @@ import { useOnScreen } from "@/hooks/visible-hook";
 // interface Props {}
 
 const About: NextPage = ({}) => {
-  const [ref, visible] = useOnScreen();
+  // const [ref, visible] = useOnScreen();
 
   return (
     <motion.div
